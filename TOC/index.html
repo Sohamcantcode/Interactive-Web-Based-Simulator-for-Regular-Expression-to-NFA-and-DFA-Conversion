@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Regex → ε-NFA → DFA Simulator</title>
+
+    <!-- Cytoscape for graph visualization -->
+    <script src="https://unpkg.com/cytoscape/dist/cytoscape.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        input {
+            padding: 8px;
+            width: 300px;
+            font-size: 16px;
+            
+        }
+
+        button {
+            padding: 8px 16px;
+            font-size: 16px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+
+        #output {
+            margin-top: 20px;
+            white-space: pre-wrap;
+            background: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+        }
+
+        #graph {
+            width: 900px;
+            height: 500px;
+            border: 2px solid #ccc;
+            margin-top: 25px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div style="text-align:center; margin-bottom:20px;">
+    <h2>Soham Borikar</h2>
+    <p>Registration Number: 24BAI0142</p>
+    </div>
+
+    <h1>Regular Expression → ε-NFA → DFA Simulator</h1>
+
+    <p>Enter a regular expression using symbols like <b>a, b</b> and operators <b>|, *, ()</b></p>
+
+    <input id="regexInput" placeholder="Example: (a|b)*abb">
+    <input id="testString" placeholder="Enter string to test">
+
+    <button onclick="simulate()">Simulate</button>
+    <button onclick="showNFA()">Show NFA</button>
+    <button onclick="showDFA()">Show DFA</button>
+
+    <button onclick="convertRegex()">Convert</button>
+
+    <div id="output"></div>
+
+    <div id="graph"></div>
+
+    <!-- main script -->
+    <script type="module" src="script.js"></script>
+
+</body>
+
+</html>
